@@ -1,0 +1,2 @@
+/user/hadoop_admin/input/wordcount.txt
+/user/b05902078/2pt_Results

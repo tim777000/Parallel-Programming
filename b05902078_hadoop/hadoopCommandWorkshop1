@@ -1,0 +1,72 @@
+*2pt
+hdfs dfs -ls /user/b05902078
+hadoop jar WordCount.jar WordCount /user/hadoop_admin/input/wordcount.txt /user/b05902078/2pt_Results
+hdfs dfs -ls /user/b05902078
+hdfs dfs -copyToLocal /user/b05902078/2pt_Results 2pt_Results
+ls
+ls 2pt_Results/
+cat 2pt_Results/_SUCCESS
+cat 2pt_Results/part-00000
+
+Learn   1
+and 2
+as  1
+character   1
+count   1
+count,  4
+count.  1
+how 1
+insert  1
+line    1
+more    1
+paragraph   1
+see 1
+the 2
+to  1
+type,   1
+word    2
+words   1
+you 1
+
+hdfs dfs -rm -r -f /user/b05902078/2pt_Results
+hdfs dfs -ls /user/b05902078
+
+*2.5pt
+hdfs dfs -copyFromLocal 2.5pt_Inputs.txt /user/b05902078/2.5pt_Inputs.txt
+hdfs dfs -ls /user/b05902078
+hadoop jar WordCount.jar WordCount /user/b05902078/2.5pt_Inputs.txt /user/b05902078/2.5pt_Results
+hdfs dfs -ls /user/b05902078
+hdfs dfs -copyToLocal /user/b05902078/2.5pt_Results 2.5pt_Results
+ls
+ls 2.5pt_Results/
+cat 2.5pt_Results/_SUCCESS
+cat 2.5pt_Results/part-00000
+
+C   1
+a   2
+and 1
+computer    1
+general-purpose,    1
+is  1
+language    1
+lexical 1
+procedural  1
+programming 1
+programming,    1
+recursion,  1
+scope,  1
+static  1
+structured  1
+supporting  1
+system. 1
+type    1
+variable    1
+with    1
+
+hdfs dfs -rm -r -f /user/b05902078/2.5pt_Inputs.txt
+hdfs dfs -rm -r -f /user/b05902078/2.5pt_Results
+hdfs dfs -ls /user/b05902078
+
+mapred job -list
+mapred job -kill <JobId>
+

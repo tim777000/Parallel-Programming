@@ -1,0 +1,14 @@
+*1 pt
+hdfs dfs -ls /user/b05902078
+hadoop jar Average.jar Average /user/hadoop_admin/input/average-small.txt /user/b05902078/workshopTwo
+hdfs dfs -ls /user/b05902078
+hdfs dfs -copyToLocal /user/b05902078/workshopTwo workshopTwo
+ls
+ls workshopTwo/
+cat workshopTwo/_SUCCESS
+cat workshopTwo/part-00000
+cat workshopTwo/part-00001
+
+hdfs dfs -rm -r -f /user/b05902078/workshopTwo
+
+

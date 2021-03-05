@@ -1,0 +1,4 @@
+gcc -Xpreprocessor -fopenmp -lomp main.c matrix.c -std=c99 -o main
+gcc -Xpreprocessor -fopenmp -lomp image_match.c -o image_match
+gcc -std=c99 -O2 -Xpreprocessor -fopenmp -lomp 10094.c -o 10094 -lm
+gcc -std=c99 -O2 -Xpreprocessor -fopenmp -lomp 10202.c -o 10202
